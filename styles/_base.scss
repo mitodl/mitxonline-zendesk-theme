@@ -8,6 +8,7 @@ body {
   color: $text_color;
   font-family: $text_font;
   font-size: $font-size-base;
+  font-weight: $font-weight-normal;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 
@@ -29,15 +30,13 @@ h6 {
 }
 
 h1 {
-  font-size: 32px;
+  font-size: 35px;
 }
-
 h2 {
   font-size: 22px;
 }
-
 h3 {
-  font-size: 18px;
+  font-size: 22px;
   font-weight: $font-weight-semibold;
 }
 
