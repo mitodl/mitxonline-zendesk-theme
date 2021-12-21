@@ -22,7 +22,7 @@
     color: white;
     font-size: 18px;
     line-height: 22px;
-    font-weight: 600;
+    font-weight: $font-weight-semibold;
     display: block;
     text-align: left;
     padding: 10px 0 0;
@@ -41,13 +41,13 @@
     input[type="submit"] {
       float: right;
       width: 100px;
-      background: #355B6B;
+      background: $mit-brand-color;
       font-size: 20px;
-      font-weight: 600;
+      font-weight: $font-weight-semibold;
       height: 65px;
       min-width: 100px;
       padding: 0 10px;
-      text-transform: uppercase;
+      text-transform: none;
 
       @include tablet {
         width: 134px;
@@ -57,10 +57,11 @@
     input[type="search"] {
       float: left;
       width: calc(100% - 110px);
-      font-weight: 600;
+      font-weight: $font-weight-semibold;
 
       @include tablet {
         width: calc(100% - 150px);
+        input#query {color: $mit-link-color;}
       }
     }
   }
