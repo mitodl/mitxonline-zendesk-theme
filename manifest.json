@@ -29,7 +29,7 @@
       "type": "color",
       "description": "link_color_description",
       "label": "link_color_label",
-      "value": "#355b6b"
+      "value": "#FFFFFF"
     }, {
       "identifier": "article_link_color",
       "type": "color",
@@ -297,7 +297,7 @@
       "type": "text",
       "description": "mit_address_description",
       "label": "mit_address_label",
-      "value": "Massachusetts Institute of Technology 77 Massachusetts Avenue Cambridge, MA 02139"
+      "value": "Massachusetts Institute of Technology\n77 Massachusetts Avenue\nCambridge, MA 02139"
     }, {
       "identifier": "mit_home",
       "type": "text",
@@ -317,6 +317,12 @@
       "label": "mit_tos_label",
       "value": "https://mitxonline.mit.edu/terms-of-service/"
     }, {
+      "identifier": "mit_accessibility",
+      "type": "text",
+      "description": "mit_accessibility_link",
+      "label": "mit_accessibility_label",
+      "value": "https://accessibility.mit.edu/"
+    },{
       "identifier": "mit_privacy_policy",
       "type": "text",
       "description": "mit_privacy_policy_description",

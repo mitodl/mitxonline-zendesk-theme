@@ -42,7 +42,7 @@
     }
 
     &-internal {
-      background-color: transparent;
+      background-color: $brand_color;
       border: 1px solid $border-color;
 
       .icon-lock::before {
@@ -52,13 +52,16 @@
         position: relative;
       }
 
-      a { color: $text_color; }
+      a { color: $text_color;
+      background-color: $brand_color; }
     }
   }
 
   &-item-link {
     color: $brand_color;
+    background-color: $mit-brand-color;
     padding: 20px 30px;
+    border-radius: 2px;
 
     &:hover,
     &:focus,

@@ -1,9 +1,8 @@
 /***** Homepage *****/
 .container {
 
-  margin-top: 60px;
-
   .section {
+    margin-top: 44px;
     @include tablet {
       margin-bottom: 10px;
     }
@@ -94,14 +93,14 @@
         color: $link_color;
         font-size: 24px;
         line-height: 25px;
-        font-weight: 600;
+        font-weight: $font-weight-semibold;
       }
 
       p {
         color: black;
         font-size: 18px;
         line-height: 22px;
-        font-weight: 600;
+        font-weight: $font-weight-semibold;
       }
 
       &:hover {
