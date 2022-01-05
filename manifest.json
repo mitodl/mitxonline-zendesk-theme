@@ -11,7 +11,7 @@
       "type": "color",
       "description": "brand_color_description",
       "label": "brand_color_label",
-      "value": "#006b9c"
+      "value": "#ae1f34"
     }, {
       "identifier": "brand_text_color",
       "type": "color",
@@ -29,19 +29,19 @@
       "type": "color",
       "description": "link_color_description",
       "label": "link_color_label",
-      "value": "#FFFFFF"
+      "value": "#ae1f34"
     }, {
       "identifier": "article_link_color",
       "type": "color",
       "description": "article_link_color_description",
       "label": "article_link_color_label",
-      "value": "#1F73B7"
+      "value": "#ae1f34"
     }, {
       "identifier": "visited_article_link_color",
       "type": "color",
       "description": "visited_article_link_color_description",
       "label": "visited_article_link_color_label",
-      "value": "#A31F34"
+      "value": "#8f2b2b"
     }, {
       "identifier": "background_color",
       "type": "color",

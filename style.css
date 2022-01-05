@@ -423,8 +423,12 @@ ul {
   padding: 10px 0;
 }
 
+.form .suggestion-list li a {
+  color: black;
+}
+
 .form .suggestion-list li a:visited {
-  color: darken($link_color, 20%);
+  color: #8f2b2b;
 }
 
 /***** Header *****/
@@ -700,6 +704,7 @@ ul {
   background: black;
   color: white;
   padding: 0 0 12px;
+  margin-top: 30px;
 }
 
 .footer .submit-a-request {
@@ -771,8 +776,9 @@ ul {
   font-size: 24px;
   line-height: 30px;
   font-weight: 500;
-  background: #006b9c;
+  background: #ae1f34;
   border-radius: 5px;
+  border: 1px solid #ae1f34;
 }
 
 .footer .footer-top {
@@ -1378,11 +1384,11 @@ ul {
 }
 
 .container .blocks-list li {
-  border-color: $link_color;
+  border-color: white;
 }
 
 .container .blocks-list li h4 {
-  color: $link_color;
+  color: white;
   font-size: 24px;
   line-height: 25px;
   font-weight: 600;
@@ -1397,10 +1403,6 @@ ul {
 
 .container .blocks-list li:hover {
   background: none;
-}
-
-.container .blocks-list li:hover a h4 {
-  color: $link_color;
 }
 
 .container .blocks-list li:hover a p {
@@ -1759,7 +1761,7 @@ ul {
 }
 
 .article-body a:visited {
-  color: darken($link_color, 20%);
+  color: #8f2b2b;
 }
 
 .article-body code {
@@ -2305,7 +2307,7 @@ ul {
 }
 
 .comment-body a:visited {
-  color: darken($link_color, 20%);
+  color: #8f2b2b;
 }
 
 .comment-body code {
@@ -2610,7 +2612,7 @@ ul {
 }
 
 .striped-list-title:visited {
-  color: darken($link_color, 20%);
+  color: #8f2b2b;
 }
 
 .striped-list .meta-group {
@@ -2882,7 +2884,7 @@ ul {
 }
 
 .post-body a:visited {
-  color: darken($link_color, 20%);
+  color: #8f2b2b;
 }
 
 .post-body code {

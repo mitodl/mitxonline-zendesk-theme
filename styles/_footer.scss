@@ -10,6 +10,7 @@
   background: black;
   color: white;
   padding: 0 0 12px;
+  margin-top: 30px;
 
   .submit-a-request {
     text-transform: uppercase;
@@ -75,8 +76,9 @@
       font-size: 24px;
       line-height: 30px;
       font-weight: $font-weight-normal;
-      background: $contact-us-btn-color;
+      background: $mit-brand-color;
       border-radius: 5px;
+      border: 1px solid $mit-brand-color;
     }
   }
   .footer-top {
