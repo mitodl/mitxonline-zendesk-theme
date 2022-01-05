@@ -82,6 +82,7 @@
 
 .form footer {
   padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .form footer a {
@@ -108,7 +109,9 @@
 
   li {
     padding: 10px 0;
-
-    a:visited { color: $visited_link_color; }
+    a {
+      color: black;
+    }
+    a:visited { color: $visited-link-color; }
   }
 }
