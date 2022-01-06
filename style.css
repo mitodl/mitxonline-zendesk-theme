@@ -1113,6 +1113,11 @@ ul {
   float: left;
   width: calc(100% - 110px);
   font-weight: 600;
+  color: black;
+}
+
+.hero .search input[type="search"]::placeholder {
+  color: black;
 }
 
 @media (min-width: 768px) {

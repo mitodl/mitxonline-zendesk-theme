@@ -58,6 +58,11 @@
       float: left;
       width: calc(100% - 110px);
       font-weight: $font-weight-semibold;
+      color: black;
+
+      &::placeholder {
+        color: black;
+      }
 
       @include tablet {
         width: calc(100% - 150px);
