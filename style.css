@@ -59,7 +59,6 @@ textarea {
 }
 
 input {
-  font-weight: 300;
   max-width: 100%;
   box-sizing: border-box;
   outline: none;
@@ -1004,7 +1003,7 @@ ul {
   border: 1px solid #ddd;
   border-radius: 8px;
   box-sizing: border-box;
-  color: #999;
+  color: #797676;
   height: 65px;
   font-size: 24px;
   padding-left: 20px;
@@ -2008,7 +2007,7 @@ ul {
 
 .recent-articles a:visited,
 .related-articles a:visited {
-  color: $visited_article_link_color;
+  color: darken($link_color, 20%);
 }
 
 /***** Attachments *****/
