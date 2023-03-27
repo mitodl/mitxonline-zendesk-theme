@@ -229,6 +229,7 @@
 
   &-item {
     display: block;
+    font-weight: $font-weight-base;
     margin-top: 10px;
     margin-bottom: 16px;
     overflow: hidden;
@@ -249,7 +250,7 @@
   a {
     text-decoration: underline;
     color: $article_link_color;
-  
+
     &:visited {
       color: $visited_article_link_color;
     }
