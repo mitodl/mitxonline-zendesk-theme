@@ -393,6 +393,7 @@ ul {
 
 .form footer {
   padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .form footer a {
@@ -466,7 +467,6 @@ ul {
   color: #000000;
   font-weight: 600;
   font-size: 14px;
-  padding: 12px 0 0;
   line-height: 18px;
   display: inline-block;
 }
@@ -482,38 +482,22 @@ ul {
   position: relative;
   float: left;
   margin: 0 10px 0 0;
-  width: 190px;
+  width: 121px;
 }
 
 .logo .mit-link, .logo .mitxonline-link {
-  position: absolute;
   z-index: 2;
-  opacity: .5;
-}
-
-.logo .mit-link {
-  left: 0;
-  top: 7px;
-  width: 72px;
-  height: 39px;
-}
-
-.logo .mitxonline-link {
-  left: 100px;
-  top: 15px;
-  width: 190px;
-  height: 25px;
 }
 
 @media (min-width: 768px) {
   .logo {
-    width: 250px;
+    width: 121px;
     margin: 0 20px 0 0;
   }
 }
 
 .logo img {
-  width: 100%;
+  width: 121px;
   display: block;
   height: auto;
 }
@@ -700,10 +684,9 @@ ul {
 }
 
 .footer {
-  background: black;
+  background: #03152D;
   color: white;
-  padding: 0 0 12px;
-  margin-top: 30px;
+  font-family: Inter;
 }
 
 .footer .submit-a-request {
@@ -805,49 +788,183 @@ ul {
   color: white;
 }
 
-.footer .mit-info {
-  font-size: 14px;
-  line-height: 24px;
-  padding: 0 0 32px 0;
+.footer .new-footer {
+  border-top: 2px solid $brand_color;
+  background: #03152D;
+  color: #FFF;
+  font-size: 13px;
+  white-space: normal;
+  display: flex;
+  justify-content: center;
+}
+
+.footer .new-footer .new-footer-container {
+  display: flex;
 }
 
 @media (min-width: 1024px) {
-  .footer .mit-info {
-    padding: 0;
-    float: left;
-    width: 44%;
+  .footer .new-footer .new-footer-container {
+    flex-basis: 75%;
   }
 }
 
-.footer .mit-info img {
-  width: 78px;
-  height: 41px;
-  margin: 0 auto 15px;
-}
-
-@media (min-width: 1024px) {
-  .footer .mit-info img {
-    margin: 5px 15px 0 0;
-    float: left;
+@media (max-width: 768px) {
+  .footer .new-footer .new-footer-container {
+    flex-direction: column-reverse;
+    padding-left: 10px;
   }
 }
 
-@media (min-width: 1024px) {
-  .footer .mit-info img {
-    margin: 5px 22px 0 0;
+.footer .new-footer .copyright-container {
+  padding: 40px 0 12px 0;
+  flex-basis: 40%;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 768px) {
+  .footer .new-footer .copyright-container {
+    width: 100%;
+    padding: 30px 0 0 12px;
+    display: inline-flex;
+    flex-direction: column;
   }
 }
 
-.footer .mit-info address {
-  overflow: hidden;
-  display: block;
-  margin: 0;
+@media (min-width: 768px) {
+  .footer .new-footer .copyright-container .copyright-col {
+    margin-left: 0;
+  }
+}
+
+.footer .new-footer .copyright-container .address-col > address, .footer .new-footer .copyright-container .copyright-col {
+  opacity: 0.6;
   font-style: normal;
-  white-space: pre-line;
+  margin-bottom: 1rem;
+  white-space: pre-wrap;
 }
 
-.footer .mit-info .copyright {
-  text-align: left;
+@media (min-width: 768px) {
+  .footer .new-footer .copyright-container .address-col, .footer .new-footer .copyright-container .copyright-col {
+    flex-direction: column;
+  }
+}
+
+.footer .new-footer .copyright-container .address-col > a > img {
+  display: inline-flex;
+  width: 130px;
+  height: 33px;
+  flex-shrink: 0;
+  margin-top: 5px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+@media (min-width: 1024px) {
+  .footer .new-footer .copyright-container .address-col > a > img {
+    margin-bottom: 15px;
+  }
+}
+
+.footer .new-footer .help-contact-container {
+  flex-basis: 60%;
+  margin: auto;
+  opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+  .footer .new-footer .help-contact-container {
+    padding-left: 12px;
+    width: 100%;
+    padding-top: 30px;
+  }
+  .footer .new-footer .help-contact-container .links > li {
+    width: calc(100% / 3);
+    padding: 5px 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer .new-footer .help-contact-container {
+    padding-left: 0;
+    width: 100%;
+  }
+}
+
+.footer .new-footer .help-contact-container .help-contact-row {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .footer .new-footer .help-contact-container .help-contact-row {
+    flex-direction: column;
+  }
+}
+
+.footer .new-footer .help-contact-container .help-col, .footer .new-footer .help-contact-container .contact-col {
+  display: inline-flex;
+  margin-right: 30px;
+}
+
+.footer .new-footer .help-contact-container .info {
+  margin-left: 15px;
+}
+
+.footer .new-footer .help-contact-container .info p {
+  margin-block-start: 0;
+  margin-block-end: 1rem;
+}
+
+@media (min-width: 768px) {
+  .footer .new-footer .help-contact-container .info {
+    margin-left: 15px;
+  }
+}
+
+.footer .new-footer .help-contact-container .info > a {
+  font-size: 16px;
+  text-decoration: none;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+@media (min-width: 768px) {
+  .footer .new-footer .help-contact-container .info > a {
+    display: block;
+  }
+}
+
+.footer .new-footer .help-contact-container img {
+  width: 35px;
+  height: 35px;
+  padding: 0.484px 0 1.453px 0;
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+
+.footer .new-footer .help-contact-container a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+.footer .new-footer .help-contact-container .links {
+  display: inline-flex;
+  gap: 30px;
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+  .footer .new-footer .help-contact-container .links {
+    gap: 10px;
+    gap: 0;
+    width: auto;
+  }
 }
 
 .footer .right-info {
@@ -978,7 +1095,7 @@ ul {
 .breadcrumbs li {
   color: lighten($text_color, 20%);
   display: inline;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 18px;
   max-width: 450px;
   overflow: hidden;
@@ -1977,7 +2094,7 @@ ul {
   border-radius: 4px;
   color: $text_color;
   display: block;
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 10px;
   padding: 10px;
 }
@@ -2007,7 +2124,7 @@ ul {
 
 .recent-articles a:visited,
 .related-articles a:visited {
-  color: darken($link_color, 20%);
+  color: $visited_article_link_color;
 }
 
 /***** Attachments *****/
