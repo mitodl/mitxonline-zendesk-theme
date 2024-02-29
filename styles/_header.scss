@@ -45,20 +45,6 @@ $header-height: 71px;
     z-index: 2;
   }
 
-  // .mit-link {
-  //   left: 0;
-  //   top: 7px;
-  //   width: 72px;
-  //   height: 39px;
-  // }
-
-  // .mitxonline-link {
-  //   left: 100px;
-  //   top: 15px;
-  //   width: 190px;
-  //   height: 25px;
-  // }
-
   @include tablet {
     width: 121px;
     margin: 0 20px 0 0;
