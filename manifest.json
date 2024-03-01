@@ -79,9 +79,11 @@
         { "label": "Impact", "value": "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" },
         { "label": "Lucida Grande", "value": "'Lucida Grande', 'Lucida Sans', 'Lucida Sans Unicode', sans-serif" },
         { "label": "Montserrat", "value": "'Montserrat', 'Lucida Sans', 'Lucida Sans Unicode', sans-serif" },
-        { "label": "Trebuchet MS", "value": "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }
+        { "label": "Trebuchet MS", "value": "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" },
+        { "label": "Poppins", "value": "'Poppins', sans-serif"}
+
       ],
-      "value": "'Montserrat', 'Lucida Sans', 'Lucida Sans Unicode', sans-serif"
+      "value": "'Poppins', sans-serif"
     }, {
       "identifier": "text_font",
       "type": "list",
@@ -104,9 +106,11 @@
         { "label": "Impact", "value": "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" },
         { "label": "Lucida Grande", "value": "'Lucida Grande', 'Lucida Sans', 'Lucida Sans Unicode', sans-serif" },
         { "label": "Montserrat", "value": "'Montserrat', 'Lucida Sans', 'Lucida Sans Unicode', sans-serif" },
-        { "label": "Trebuchet MS", "value": "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }
+        { "label": "Trebuchet MS", "value": "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" },
+        { "label": "Inter", "value": "'Inter', sans-serif"}
+
       ],
-      "value": "'Montserrat', 'Lucida Sans', 'Lucida Sans Unicode', sans-serif"
+      "value": "'Inter', sans-serif"
     }]
   }, {
     "label": "brand_group_label",
