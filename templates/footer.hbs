@@ -14,27 +14,48 @@
       </div>
   {{/if}}
 
-  <div class="container">
-      <div class="footer-top">
-        <div class="mit-info">
-          <img src="{{settings.mit_footer_logo}}" alt="MIT" loading="lazy"/>
+<footer class="new-footer">
+  <div class="new-footer-container">
+      <div class="copyright-container">
+          <div class="address-col">
+            <a href="https://openlearning.mit.edu">
+              <img src="{{settings.mit_footer_logo}}" alt="MIT" loading="lazy"/>
+            </a>
             <address>{{settings.mit_address}}</address>
-        </div>
-      <div class="right-info">
+          </div>
+          <span class="copyright-col">© <span id="date"></span> Massachusetts Institute of Technology</span>
       </div>
-    </div>
-    <div class="row footer-bottom">
-      <ul class="footer-sub-nav">
-        <li><a href={{settings.mit_about_us}}>About Us</a></li>
-        <li><a href={{settings.mit_tos}}>Terms of Service</a></li>
-        <li><a href={{settings.mit_privacy_policy}}>Privacy Policy</a></li>
-        <li><a href={{settings.mit_honor_code}}>Honor Code</a></li>
-        <li><a href={{settings.mit_accessibility}}>Accessibility</a></li>
-      </ul>
+      <div class="help-contact-container">
+        <div class="help-contact-row">
+            <div class="help-col">
+              <img src="{{asset 'help-faq.png'}}" alt="Help" />
+              <div class="info">
+                <a href={{page_path 'help_center'}}>Help & FAQ</a>
+                <p>Find answers to your questions.</p>
+              </div>
+            </div>
 
-      <span class="copyright">© <span id="date"></span> Massachusetts Institute of Technology</span>
-
-    </div>
+            <div class="contact-col">
+              <img src="{{asset 'contact-us.png'}}" alt="Contact Us" />
+              <div class="info">
+                <a href={{page_path 'new_request'}}>Contact Us</a>
+                <p>Let us know how we can assist you.</p>
+              </div>
+            </div>
+        </div>
+        <div class="links-row">
+            <ul class="links">
+              <li><a href={{settings.mit_about_us}}>About Us</a></li>
+              <li><a href={{settings.mit_tos}}>Terms of Service</a></li>
+              <li><a href={{settings.mit_accessibility}}>Accessibility</a></li>
+              <li><a href={{settings.mit_privacy_policy}}>Privacy Policy</a></li>
+              <li><a href={{settings.mit_honor_code}}>Honor Code</a></li>
+              <li><a href={{page_path 'new_request'}}>Contact Us</a></li>
+            </ul>
+        </div>
+      </div>
+  </div>
+</footer>
 
     <div class="footer-language-selector">
       {{#if alternative_locales}}
