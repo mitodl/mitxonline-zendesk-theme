@@ -109,7 +109,6 @@
 
   &-comment-count {
     color: $secondary-text-color;
-    font-weight: $font-weight-light;
 
     &:hover {
       text-decoration: none;
@@ -117,10 +116,11 @@
 
     .icon-comments {
       color: $brand_color;
-      content: "\1F4AC";
       display: inline-block;
-      font-size: 18px;
-      padding: 5px;
+      width: 18px;
+      height: 18px;
+      margin: 5px;
+      vertical-align: middle;
     }
   }
 
@@ -134,17 +134,13 @@
       [dir="rtl"] & { padding: 0 50px 0 0; }
     }
 
-    border-top: 1px solid $border-color;
+    border-top: 1px solid $low-contrast-border-color;
     flex: 1;
     padding: 30px 0;
     text-align: center;
 
-    h5 {
-      @include desktop {
-        border-bottom: 1px solid $border-color;
-        padding-bottom: 20px;
-      }
-
+    &-title {
+      font-size: 18px;
       font-weight: $font-weight-semibold;
     }
   }

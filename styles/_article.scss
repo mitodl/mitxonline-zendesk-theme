@@ -47,13 +47,15 @@
   }
 
   &-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+
     @include tablet {
       flex-basis: 100%; /* Take entire row */
     }
 
-    .icon-lock::before {
-      content: "\1F512";
-      font-size: 20px;
+    .icon-lock {
       position: relative;
       left: -5px;
       vertical-align: baseline;
@@ -61,7 +63,9 @@
   }
 
   [role="button"] {
-    @include tablet { width: auto; }
+    @include tablet {
+      width: auto;
+    }
     flex-shrink: 0; /*Avoid collapsing elements in Safari (https://github.com/philipwalton/flexbugs#1-minimum-content-sizing-of-flex-items-not-honored)*/
     width: 100%;
   }
@@ -77,7 +81,9 @@
 
   &-body {
     @include content-body;
-    > p:last-child { margin-bottom: 0; }
+    > p:last-child {
+      margin-bottom: 0;
+    }
   }
 
   &-content {
@@ -95,18 +101,16 @@
 
   &-comment-count {
     color: $secondary-text-color;
-    font-weight: $font-weight-light;
 
     &:hover {
       text-decoration: none;
     }
 
-    .icon-comments {
+    &-icon {
+      vertical-align: middle;
       color: $brand_color;
-      content: "\1F4AC";
-      display: inline-block;
-      font-size: 18px;
-      padding: 5px;
+      width: 18px;
+      height: 18px;
     }
   }
 
@@ -115,10 +119,11 @@
       border: 0;
       flex: 0 0 17%;
       height: auto;
+      max-width: 17%;
     }
 
-    border-bottom: 1px solid $border-color;
-    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $low-contrast-border-color;
+    border-top: 1px solid $low-contrast-border-color;
     flex: 1 0 auto; //Explicit values needed whith flex-direction: column for IE11
     margin-bottom: 20px;
     padding: 0;
@@ -129,7 +134,7 @@
       flex-direction: row;
     }
 
-    border-top: 1px solid $border-color;
+    border-top: 1px solid $low-contrast-border-color;
     display: flex;
     flex-direction: column;
     padding: 20px 0;
@@ -140,77 +145,46 @@
       overflow-wrap: break-word;
       margin-right: 0;
 
-      &:last-child { padding: 0; }
+      &:last-child {
+        padding: 0;
+      }
 
-      @include tablet { padding-right: 20px; }
+      @include tablet {
+        padding-right: 20px;
+      }
     }
   }
 
-
   &-votes {
-    border-top: 1px solid $border-color;
+    border-top: 1px solid $low-contrast-border-color;
     padding: 30px 0;
     text-align: center;
+
+    &-question { // Explicit values for rendering h2 like a span for accessibility.
+      font-size: $font-size-base;
+      font-weight: normal;
+      margin-bottom: 0;
+    }
   }
 
   &-vote {
-    background: transparent;
-    border: 1px solid $brand_color;
-    color: $brand_color;
     margin: 10px 5px;
     min-width: 90px;
     width: auto;
-
-    &::before {
-      @extend .icon;
-      font-size: 8px;
-      margin-right: 10px;
-
-      [dir="rtl"] & {
-        margin-right: 0;
-        margin-left: 10px;
-      }
-    }
-
-    &::after {
-      content: attr(title); /* Yes/No label*/
-    }
-
-    &:focus,
-    &:active {
-      background-color: transparent;
-      color: $brand_color;
-    }
-
-    &:hover {
-      background-color: $brand_color;
-    }
-
-    &:hover::before,
-    &:hover::after,
-    &[aria-selected="true"]::before,
-    &[aria-selected="true"]::after {
-      color: $brand_text_color;
-    }
-  }
-
-  &-vote-up::before {
-    content: "\2713";
-  }
-
-  &-vote-down::before {
-    content: "\2715";
   }
 
   &-more-questions {
     margin: 10px 0 20px;
     text-align: center;
+    @include standalone-link;
   }
 
   &-return-to-top {
-    @include desktop { display: none; }
+    @include desktop {
+      display: none;
+    }
 
-    border-top: 1px solid $border-color;
+    border-top: 1px solid $high-contrast-border-color;
 
     a {
       color: $text_color;
@@ -223,25 +197,26 @@
       }
     }
 
-    .icon-arrow-up::before {
-      font-size: 16px;
-      margin-left: 5px;
-
-      [dir="rtl"] & {
-        margin-right: 10px;
-      }
+    &-icon {
+      transform: rotate(0.5turn);
     }
   }
 
-  &-unsubscribe {
-    background-color: $button-color;
-    color: $brand_text_color;
-    text-decoration: none;
-
-    &:hover {
-      background-color: $hover-button-color;
-      border-color: $hover-button-color;
+  &-subscribe button {
+    @extend .button;
+    &[data-selected="true"] {
+      @extend .button-primary;
     }
+  }
+
+  td > p:first-child,
+  th > p:first-child {
+    margin-top: 0;
+  }
+
+  td > p:last-child,
+  th > p:last-child {
+    margin-bottom: 0;
   }
 }
 
@@ -249,30 +224,23 @@
   &-title {
     font-size: $font-size-base;
     position: relative;
+    font-weight: 600;
   }
 
   &-item {
-    border-radius: 4px;
-    color: $text_color;
     display: block;
     font-weight: $font-weight-base;
-    margin-bottom: 10px;
-    padding: 10px;
-
-    &.current-article,
-    &:hover {
-      background-color: $brand_color;
-      color: $brand_text_color;
-      text-decoration: none;
-    }
+    margin-top: 10px;
+    margin-bottom: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 
 .recent-articles,
 .related-articles {
-  h3 {
-    font-size: $font-size-base;
-    margin: 20px 0;
+  &-title {
+    @extend .comment-heading;
   }
 
   li {
@@ -282,7 +250,7 @@
   a {
     text-decoration: underline;
     color: $article_link_color;
-  
+
     &:visited {
       color: $visited_article_link_color;
     }

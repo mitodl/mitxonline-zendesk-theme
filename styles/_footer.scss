@@ -113,10 +113,10 @@
     display: flex;
     justify-content: center;
 
-  
+
     .new-footer-container {
       display:flex;
-  
+
       @include desktop {
         flex-basis: 75%;
       }
@@ -125,26 +125,26 @@
         padding-left: 10px;
       }
     }
-  
+
     .copyright-container {
         padding: 40px 0 12px 0;
         flex-basis:40%;
         flex-wrap: wrap;
         flex-direction: row-reverse;
-    
+
         @include mobile {
           width:100%;
           padding: 30px 0 0 12px;
           display: inline-flex;
           flex-direction: column;
         }
-  
+
         .copyright-col{
           @include tablet {
             margin-left: 0;
           }
         }
-  
+
         .address-col>address, .copyright-col{
           opacity: 0.6;
           font-style: normal;
@@ -156,7 +156,7 @@
             flex-direction: column;
            }
         }
-  
+
         .address-col>a>img {
           display: inline-flex;
           width: 130px;
@@ -170,12 +170,12 @@
          }
         }
     }
-  
+
     .help-contact-container{
       flex-basis:60%;
       margin: auto;
       opacity: 0.6;
-  
+
       @include mobile {
         padding-left: 12px;
         width: 100%;
@@ -185,27 +185,27 @@
           padding: 5px 0;
         }
       }
-  
+
       @include tablet {
         padding-left: 0;
         width:100%;
       }
-  
+
       .help-contact-row {
            display: flex;
            flex-direction: row;
            margin-top: 10px;
-  
+
           @include mobile {
              flex-direction: column;
           }
        }
-  
+
       .help-col, .contact-col {
          display: inline-flex;
-         margin-right: 30px;  
+         margin-right: 30px;
       }
-  
+
       .info {
         margin-left: 15px;
 
@@ -228,7 +228,7 @@
           display:block;
         }
       }
-  
+
       img {
         width: 35px;
         height: 35px;
@@ -236,12 +236,12 @@
         flex-shrink: 0;
         margin-top: 5px;
       }
-  
+
       a {
          color:  #FFF;
          text-decoration: none;
       }
-  
+
       .links {
             display: inline-flex;
             gap: 30px;
@@ -250,11 +250,11 @@
             padding: 0;
             flex-wrap: wrap;
             margin-top: 30px;
-  
+
            @include mobile {
               gap: 10px;
               gap: 0;
-              width: auto; 
+              width: auto;
            }
         }
     }

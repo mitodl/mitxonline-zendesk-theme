@@ -8,6 +8,16 @@
   &-footer {
     padding-top: 50px;
     text-align: center;
+
+    &-title {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &-featured-posts .title {
+    font-size: 18px;
+    font-weight: 600;
   }
 
   &-featured-posts,
@@ -19,7 +29,10 @@
   &-header {
     margin-bottom: 30px;
 
-    h4 { margin-bottom: 0; }
+    .title {
+      margin-bottom: 0;
+      font-size: 16px;
+    }
   }
 }
 
@@ -45,7 +58,7 @@
 
 .topic-header {
   @include tablet { padding-bottom: 10px; }
-  border-bottom: 1px solid $border-color;
+  border-bottom: 1px solid $low-contrast-border-color;
   font-size: $font-size-small;
 
   .dropdown {
@@ -57,7 +70,7 @@
     }
 
     display: block;
-    border-top: 1px solid $border-color;
+    border-top: 1px solid $low-contrast-border-color;
     padding: 10px 0;
   }
 }
@@ -77,11 +90,8 @@
   margin-bottom: 10px;
   width: 100%;
 
-  .dropdown {
-    width: 100%;
-  }
-
-  [role="button"] {
+  button {
+    @extend .button;
     @include tablet { width: auto;}
 
     line-height: 30px;
@@ -96,7 +106,7 @@
       color: $brand_text_color;
     }
 
-    &[aria-selected="true"] {
+    &[data-selected="true"] {
       background-color: $brand_color;
       color: $brand_text_color;
 

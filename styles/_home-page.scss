@@ -45,19 +45,19 @@
 
       a {
         display: block;
-        border-bottom: 1px solid $border-color;
+        border-bottom: 1px solid $low-contrast-border-color;
         padding: 15px 0;
         color: $text_color;
       }
 
-      .icon-lock::before {
-        vertical-align: baseline;
-      }
+    .icon-lock {
+      vertical-align: baseline;
+    }
 
-      &:last-child a {
-        @include desktop {
-          border-bottom: 1px solid $border-color;
-        }
+    &:last-child a {
+      @include desktop {
+        border-bottom: 1px solid $low-contrast-border-color;
+      }
 
         border: 0;
       }
@@ -71,16 +71,19 @@
 
     &-image {
       min-height: 300px;
+      margin-top: 32px;
       background-image: url($community_image);
       background-position: center;
       background-repeat: no-repeat;
       max-width: 100%;
     }
+
+    @include standalone-link;
   }
 
   .community,
   .activity {
-    border-top: 1px solid $border-color;
+    border-top: 1px solid $low-contrast-border-color;
     padding: 30px 0;
   }
 
@@ -89,14 +92,14 @@
     li {
       border-color: white;
 
-      h4 {
+      .blocks-item-title {
         color: white;
         font-size: 24px;
         line-height: 25px;
         font-weight: $font-weight-semibold;
       }
 
-      p {
+      .blocks-item-description {
         color: black;
         font-size: 18px;
         line-height: 22px;

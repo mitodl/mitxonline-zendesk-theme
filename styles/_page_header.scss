@@ -4,6 +4,8 @@
   @include tablet {
     align-items: baseline;
     flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 16px;
     margin: 0;
   }
 
@@ -32,14 +34,13 @@
       flex-basis: 100%;
     }
     font-style: italic;
-    font-weight: $font-weight-light;
     margin: 0 0 30px 0;
     word-break: break-word;
   }
 
-  .icon-lock::before {
-    content: "\1F512";
-    font-size: 20px;
+  .icon-lock {
+    height: 20px;
+    width: 20px;
     position: relative;
     left: -5px;
     vertical-align: baseline;

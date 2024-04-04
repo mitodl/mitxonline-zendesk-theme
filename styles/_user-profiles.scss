@@ -36,11 +36,11 @@
 }
 
 .profile-avatar .user-avatar {
-  width: 65px;
-  height: 65px;
+  width: 80px;
+  height: 80px;
 }
 
-.profile-avatar .icon-agent::before {
+.profile-avatar .icon-agent {
   bottom: 0;
   right: 0;
 }
@@ -56,6 +56,9 @@
 
   .name {
     margin: 0;
+    line-height: 25px;
+    vertical-align: middle;
+    display: inline;
   }
 }
 
@@ -89,13 +92,9 @@
   }
 }
 
-.profile-header .options [data-action="edit-profile"] {
-  background-color: $brand_color;
-  border: 0;
-  color: $brand_text_color;
-  line-height: normal;
-  padding: 8px 20px;
-  outline-color: $brand_color;
+.user-profile-actions {
+  width: 100%;
+  margin-bottom: 15px;
 }
 
 .profile-header .description {
@@ -120,7 +119,6 @@
 
 .profile-stats .stat-label {
   color: $secondary-text-color;
-  font-weight: $font-weight-light;
   flex: 0 0 100px;
   margin-right: 10px;
 
@@ -231,11 +229,8 @@
   font-size: 12px;
   text-align: center;
 
-  &::after {
-    content: "\1f512";
+  .profile-private-icon {
     margin-left: 5px;
-    font-family: "copenhagen-icons";
-    vertical-align: middle;
     line-height: 15px;
   }
 
@@ -248,7 +243,6 @@
 
 .profile-nav {
   background-color: $secondary-shade;
-  border: 0;
   margin-bottom: 37px;
 }
 
@@ -276,7 +270,6 @@
   flex-basis: 100%;
   padding: 10px 0;
   color: $secondary-text-color;
-  font-weight: $font-weight-light;
   font-size: $font-size-small;
   white-space: nowrap;
   overflow: hidden;
@@ -325,6 +318,71 @@
   }
 }
 
+// Profile badges
+
+.profile-badges {
+  &-items {
+    margin-top: 25px;
+  }
+
+  &-item {
+    border-top: 1px solid $low-contrast-border-color;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 27px 12px;
+
+    & > div {
+      padding-right: 12px;
+      padding-left: 12px;
+    }
+
+    &-image {
+      height: 40px;
+      width: 40px;
+      margin-right: 12px;
+
+      img {
+        max-height: 40px;
+      }
+
+      [dir="rtl"] & {
+        margin-left: 12px;
+        margin-right: 0;
+      }
+    }
+
+    &-title,
+    &-metadata-title {
+      font-size: $font-size-base;
+      margin-bottom: 10px;
+    }
+
+    &-title {
+      font-weight: $font-weight-semibold;
+    }
+
+    &-description,
+    &-metadata-description {
+      color: $secondary-text-color;
+      font-size: $font-size-small;
+      margin: 0;
+    }
+
+    &-metadata {
+      margin-left: auto;
+      text-align: right;
+
+      [dir="rtl"] & {
+        margin-left: 0;
+        margin-right: auto;
+        text-align: left;
+      }
+    }
+  }
+}
+
 // Profile contribution
 
 .profile-contribution {
@@ -368,16 +426,18 @@
   border-bottom: 1px solid #eee;
 }
 
-.profile-contribution-list > .profile-contribution::before {
+.profile-contribution-icon {
   left: 0;
   position: absolute;
-  font-size: 16px;
   color: #ccc;
-  font-family: "copenhagen-icons";
   line-height: 25px;
 
   [dir="rtl"] & {
     right: 0;
+  }
+
+  svg {
+    vertical-align: middle;
   }
 }
 
@@ -424,13 +484,7 @@
   color: #999;
 }
 
-.profile-section .private-activity::before {
-  content: "\1f512";
-  font-family: "copenhagen-icons";
-  font-style: normal;
-  font-size: 12px;
-  font-weight: normal;
-  vertical-align: middle;
+.private-activity-icon {
   margin-right: 10px;
 
   [dir="rtl"] & {
@@ -533,23 +587,20 @@
 
 // Icons
 
-.profile-activity::before {
+.profile-activity-icon {
   position: absolute;
   left: 0;
   width: 28px;
+  height: 28px;
   border-radius: 50%;
-  content: "";
   background-size: 14px 14px;
   background-repeat: no-repeat;
   background-color: $background_color;
   background-position: 50% 50%;
   text-align: center;
-  line-height: 40px;
-  font-size: 16px;
   color: #ccc;
-  font-family: "copenhagen-icons";
 
- [dir="rtl"] & {
+  [dir="rtl"] & {
     right: 0;
   }
 
@@ -562,20 +613,10 @@
   }
 }
 
-// Icons
-
-.profile-articles > .profile-contribution::before,
-.profile-activity-list > li[class$="-article"]::before {
-  content: "\1f4c4";
-}
-
-.profile-posts > .profile-contribution::before,
-.profile-activity-list > li[class$="-post"]::before {
-  content: "\1f4d4";
-}
-
-.profile-comments > .profile-contribution::before,
-.profile-activity-list > li[class$="-comment"]::before {
-  content: "\1f4ac";
-  line-height: 35px;
+.profile-activity-icon svg {
+  @include vertical-align;
+  // display: block;
+  width: 1em;
+  height: 1em;
+  margin: auto;
 }

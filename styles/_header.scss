@@ -76,10 +76,34 @@ $header-height: 71px;
       display: block;
       margin: 20px;
     }
+
+    > .user-nav-list {
+      li {
+        display: block;
+      }
+
+      a {
+        display: block;
+        margin: 20px;
+      }
+    }
   }
 }
 
-.nav-wrapper {
+.user-nav-list {
+  display: block;
+  list-style: none;
+
+  > li {
+    display: inline-block;
+  }
+}
+
+.nav-wrapper-desktop {
+  @include mobile { display: none; }
+  @include tablet { display: none; }
+  @include desktop { display: inline-block; }
+
   a {
     @include tablet {
       display: inline-block;
@@ -102,30 +126,166 @@ $header-height: 71px;
       color: $mit-link-color;
       text-decoration: underline;
     }
-
-    &.login { display: inline-block; }
   }
+}
 
-  .icon-menu {
-    @include tablet { display: none; }
+.nav-wrapper-mobile {
+  @include desktop { display: none; }
+
+  .menu-button-mobile {
+    background: none;
     border: 0;
-    color: $link_color;
-    cursor: pointer;
-    display: inline-block;
-    margin-right: 10px;
-    padding: 0;
     width: auto;
+    min-width: 71px;
+    cursor: pointer;
 
-    [dir="rtl"] & {
-      margin-left: 10px;
-      margin-right: 0;
+    .icon-menu {
+      padding: 7px;
+      vertical-align: middle;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
     }
 
-    &:hover,
-    &:focus,
-    &:active {
-      background-color: transparent;
-      color: $link_color;
+    &[aria-expanded="true"] {
+      .icon-menu {
+        background: #f3f3f3;
+      }
     }
   }
+
+  .menu-list-mobile {
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, .15);
+    border-top: solid 1px #ddd;
+    border-bottom: solid 1px #ddd;
+    right: 0;
+    left: 0;
+    top: $header-height;
+    z-index: 2;
+
+    &[aria-expanded="false"] {
+      display: none;
+    }
+
+    &[aria-expanded="true"] {
+      display: block;
+    }
+  }
+
+  .menu-list-mobile-items {
+    .item {
+      margin: 4px 0;
+    }
+
+    li:empty:not(.nav-divider){
+      display: none;
+    }
+
+    .nav-divider {
+      border-bottom: 0.1px solid #ddd;
+      padding: 0;
+
+      &:last-child {
+        display: none;
+      }
+    }
+
+    button {
+      background: none;
+      border: none;
+      padding: 8px 24px;
+
+      width: 100%;
+      height: 100%;
+      color: $text_color;
+      cursor: pointer;
+      text-align: start;
+
+      &:active, &:focus, &:hover {
+        background-color: #f3f3f3;
+        text-decoration: underline;
+      }
+    }
+
+    a {
+      display: block;
+      padding: 8px 24px;
+      width: 100%;
+      height: 100%;
+      color: $text_color;
+
+      &:active, &:focus, &:hover {
+        background-color: #f3f3f3;
+      }
+    }
+
+    .my-profile {
+      display: flex;
+      line-height: 1.5;
+
+      .my-profile-tooltip {
+        font-size: 12px;
+        color: #68737D;
+      }
+    }
+
+    .menu-profile-avatar {
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 8px;
+      margin-top: 1px;
+
+      [dir="rtl"] & {
+        margin-right: 0;
+        margin-left: 8px;
+      }
+    }
+  }
+}
+
+.skip-navigation {
+  align-items: center;
+  background-color: black;
+  color: white;
+  display: flex;
+  font-size: 14px;
+  justify-content: center;
+  left: -999px;
+  margin: 20px;
+  padding: 20px;
+  overflow: hidden;
+  position: absolute;
+  top: auto;
+  z-index: -999;
+
+
+  [dir="rtl"] & {
+    left: initial;
+    right: -999px;
+  }
+
+  &:focus,
+  &:active {
+    left: auto;
+    overflow: auto;
+    text-align: center;
+    text-decoration: none;
+    top: auto;
+    z-index: 999;
+
+
+  [dir="rtl"] & {
+    left: initial;
+    right: auto;
+  }
+  }
+}
+
+// Disable the skip-navigation link when modals are open
+#zd-modal-container ~ .skip-navigation {
+  display: none;
 }
