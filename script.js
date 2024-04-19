@@ -446,7 +446,7 @@
   function appendClearSearchButton(input, form) {
     const searchClearButton = buildClearSearchButton(input.id);
     const searchElement = form.querySelector(searchSelector);
-    searchElement.insertAdjacentElement('afterend', searchClearButton);
+    searchElement.insertAdjacentElement("afterend", searchClearButton);
     if (input.value.length > 0) {
       form.classList.add(searchFormFilledClassName);
     }
