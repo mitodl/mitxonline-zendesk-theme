@@ -1515,6 +1515,8 @@ ul {
 }
 .hero .search {
   overflow: hidden;
+  border-radius: 0;
+  border-style: none;
 }
 .hero .search:before {
   right: 125px;
@@ -1534,6 +1536,7 @@ ul {
   min-width: 100px;
   padding: 0 10px;
   text-transform: none;
+  margin-left: 20px;
 }
 @media (min-width: 768px) {
   .hero .search input[type=submit] {
@@ -1545,13 +1548,18 @@ ul {
   width: calc(100% - 110px);
   font-weight: 600;
   color: black;
+  border-style: solid;
+  border-width: 1px;
+}
+.hero .search input[type=search]:focus {
+  border-color: $brand_color;
 }
 .hero .search input[type=search]::placeholder {
   color: black;
 }
 @media (min-width: 768px) {
   .hero .search input[type=search] {
-    width: calc(100% - 150px);
+    width: calc(100% - 195px);
   }
   .hero .search input[type=search] input#query {
     color: #000000;
@@ -1730,7 +1738,7 @@ ul {
     margin-bottom: 10px;
   }
 }
-.container .section h2 {
+.container .home-section h2 {
   margin-bottom: 10px;
   text-align: center;
 }
