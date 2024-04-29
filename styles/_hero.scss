@@ -30,6 +30,8 @@
 
   .search {
     overflow: hidden;
+    border-radius: 0;
+    border-style: none;
 
     &:before {
       right: 125px;
@@ -48,6 +50,7 @@
       min-width: 100px;
       padding: 0 10px;
       text-transform: none;
+      margin-left: 20px;
 
       @include tablet {
         width: 134px;
@@ -59,13 +62,19 @@
       width: calc(100% - 110px);
       font-weight: $font-weight-semibold;
       color: black;
+      border-style: solid;
+      border-width: 1px;
+
+      &:focus {
+        border-color: $brand_color;
+      }
 
       &::placeholder {
         color: black;
       }
 
       @include tablet {
-        width: calc(100% - 150px);
+        width: calc(100% - 195px);
         input#query {color: $mit-link-color;}
       }
     }
