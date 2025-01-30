@@ -13,7 +13,7 @@
           "type": "color",
           "description": "brand_color_description",
           "label": "brand_color_label",
-          "value": "#17494D"
+          "value": "#ae1f34"
         },
         {
           "identifier": "brand_text_color",
@@ -27,14 +27,28 @@
           "type": "color",
           "description": "text_color_description",
           "label": "text_color_label",
-          "value": "#2F3941"
+          "value": "#333333"
         },
         {
           "identifier": "link_color",
           "type": "color",
           "description": "link_color_description",
           "label": "link_color_label",
-          "value": "#1F73B7"
+          "value": "#ae1f34"
+        },
+        {
+          "identifier": "article_link_color",
+          "type": "color",
+          "description": "article_link_color_description",
+          "label": "article_link_color_label",
+          "value": "#ae1f34"
+        },
+        {
+          "identifier": "visited_article_link_color",
+          "type": "color",
+          "description": "visited_article_link_color_description",
+          "label": "visited_article_link_color_label",
+          "value": "#8f2b2b"
         },
         {
           "identifier": "hover_link_color",
@@ -48,7 +62,7 @@
           "type": "color",
           "description": "visited_link_color_description",
           "label": "visited_link_color_label",
-          "value": "#9358B0"
+          "value": "#8f2b2b"
         },
         {
           "identifier": "background_color",
@@ -56,6 +70,13 @@
           "description": "background_color_description",
           "label": "background_color_label",
           "value": "#FFFFFF"
+        },
+        {
+          "identifier": "site_theme_color",
+          "type": "color",
+          "description": "site_theme_base_color_description",
+          "label": "site_theme_base_color_label",
+          "value": "#A32034"
         }
       ]
     },
@@ -129,11 +150,19 @@
               "value": "'Lucida Grande', 'Lucida Sans', 'Lucida Sans Unicode', sans-serif"
             },
             {
+              "label": "Montserrat",
+              "value": "'Montserrat', 'Lucida Sans', 'Lucida Sans Unicode', sans-serif"
+            },
+            {
               "label": "Trebuchet MS",
               "value": "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif"
+            },
+            {
+              "label": "Poppins",
+              "value": "'Poppins', sans-serif"
             }
           ],
-          "value": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+          "value": "'Poppins', sans-serif"
         },
         {
           "identifier": "text_font",
@@ -202,11 +231,19 @@
               "value": "'Lucida Grande', 'Lucida Sans', 'Lucida Sans Unicode', sans-serif"
             },
             {
+              "label": "Montserrat",
+              "value": "'Montserrat', 'Lucida Sans', 'Lucida Sans Unicode', sans-serif"
+            },
+            {
               "label": "Trebuchet MS",
               "value": "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif"
+            },
+            {
+              "label": "Inter",
+              "value": "'Inter', sans-serif"
             }
           ],
-          "value": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+          "value": "'Inter', sans-serif"
         }
       ]
     },
@@ -250,10 +287,48 @@
           "label": "community_background_image_label"
         },
         {
+          "identifier": "mit_background",
+          "type": "file",
+          "description": "background_image_description",
+          "label": "Background image"
+        },
+        {
+          "identifier": "mit_footer_logo",
+          "type": "file",
+          "description": "mit_footer_logo_description",
+          "label": "Footer logo"
+        },
+        {
           "identifier": "community_image",
           "type": "file",
           "description": "community_image_description",
           "label": "community_image_label"
+        }
+      ]
+    },
+    {
+      "label": "header_page_group_label",
+      "variables": [
+        {
+          "identifier": "show_user_info",
+          "type": "checkbox",
+          "description": "user_info_description",
+          "label": "user_info_label",
+          "value": false
+        },
+        {
+          "identifier": "mit_link",
+          "type": "text",
+          "description": "mit_link_description",
+          "label": "mit_link_label",
+          "value": "https://mit.edu/"
+        },
+        {
+          "identifier": "mitxonline_link",
+          "type": "text",
+          "description": "mitxonline_link_description",
+          "label": "mitxonline_link_label",
+          "value": "https://mitxonline.mit.edu/"
         }
       ]
     },
@@ -291,7 +366,7 @@
           "type": "checkbox",
           "description": "recent_activity_description",
           "label": "recent_activity_label",
-          "value": true
+          "value": false
         }
       ]
     },
@@ -310,21 +385,21 @@
           "type": "checkbox",
           "description": "article_author_description",
           "label": "article_author_label",
-          "value": true
+          "value": false
         },
         {
           "identifier": "show_article_comments",
           "type": "checkbox",
           "description": "article_comments_description",
           "label": "article_comments_label",
-          "value": true
+          "value": false
         },
         {
           "identifier": "show_follow_article",
           "type": "checkbox",
           "description": "follow_article_description",
           "label": "follow_article_label",
-          "value": true
+          "value": false
         },
         {
           "identifier": "show_recently_viewed_articles",
@@ -345,7 +420,7 @@
           "type": "checkbox",
           "description": "article_sharing_description",
           "label": "article_sharing_label",
-          "value": true
+          "value": false
         }
       ]
     },
@@ -389,6 +464,74 @@
           "description": "follow_topic_description",
           "label": "follow_topic_label",
           "value": true
+        }
+      ]
+    },
+    {
+      "label": "footer_section_contents",
+      "variables": [
+        {
+          "identifier": "show_contact_us_section",
+          "type": "checkbox",
+          "description": "show_contact_us_section_description",
+          "label": "show_contact_us_section_label",
+          "value": true
+        },
+        {
+          "identifier": "contact_us_header",
+          "type": "text",
+          "description": "contact_us_header_description",
+          "label": "contact_us_header_label",
+          "value": "Can't find what you're looking for?"
+        },
+        {
+          "identifier": "mit_address",
+          "type": "text",
+          "description": "mit_address_description",
+          "label": "mit_address_label",
+          "value": "Massachusetts Institute of Technology\n77 Massachusetts Avenue\nCambridge, MA 02139"
+        },
+        {
+          "identifier": "mit_home",
+          "type": "text",
+          "description": "mit_home_description",
+          "label": "mit_home_label",
+          "value": "https://mitxonline.mit.edu/"
+        },
+        {
+          "identifier": "mit_about_us",
+          "type": "text",
+          "description": "mit_about_us_description",
+          "label": "mit_about_us_label",
+          "value": "https://mitxonline.mit.edu/about-us/"
+        },
+        {
+          "identifier": "mit_tos",
+          "type": "text",
+          "description": "mit_tos_description",
+          "label": "mit_tos_label",
+          "value": "https://mitxonline.mit.edu/terms-of-service/"
+        },
+        {
+          "identifier": "mit_accessibility",
+          "type": "text",
+          "description": "mit_accessibility_link",
+          "label": "mit_accessibility_label",
+          "value": "https://accessibility.mit.edu/"
+        },
+        {
+          "identifier": "mit_privacy_policy",
+          "type": "text",
+          "description": "mit_privacy_policy_description",
+          "label": "mit_privacy_policy_label",
+          "value": "https://mitxonline.mit.edu/privacy-policy/"
+        },
+        {
+          "identifier": "mit_honor_code",
+          "type": "text",
+          "description": "mit_honor_code_description",
+          "label": "mit_honor_code_label",
+          "value": "https://mitxonline.mit.edu/honor-code/"
         }
       ]
     },

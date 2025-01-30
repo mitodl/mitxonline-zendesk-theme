@@ -2,30 +2,59 @@
 $header-height: 71px;
 
 .header {
+
+  .submit-a-request {
+    text-transform: none;
+    font-weight: $font-weight-semibold;
+  }
+
   @include max-width-container;
   position: relative;
   align-items: center;
   display: flex;
-  height: $header-height;
   justify-content: space-between;
+  padding: 5px 2%;
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+
+  @include mobile {
+    padding: 5px 32px;
+  }
 }
 
-.logo img {
-  max-height: 37px;
-  vertical-align: middle;
-}
-
-.logo span {
-  margin: 0 10px;
-  color: $brand_color;
-}
-
-.logo a {
+.support-center {
+  color: $mit-link-color;
+  font-weight: $font-weight-semibold;
+  font-size: 14px;
+  line-height: 18px;
   display: inline-block;
+
+  @include tablet {
+    font-size: 24px;
+    line-height: 32px;
+  }
 }
 
-.logo a:hover, .logo a:focus, .logo a:active {
-  text-decoration: none;
+.logo {
+  position: relative;
+  float: left;
+  margin: 0 10px 0 0;
+  width: 121px;
+
+  .mit-link, .mitxonline-link {
+    z-index: 2;
+  }
+
+  @include tablet {
+    width: 121px;
+    margin: 0 20px 0 0;
+  }
+
+  img {
+    width: 121px;
+    display: block;
+    height: auto;
+  }
 }
 
 .user-nav {
@@ -81,10 +110,11 @@ $header-height: 71px;
     }
 
     border: 0;
-    color: $link_color;
+    color: $mit-link-color;
     display: none;
-    font-size: 14px;
+    font-size: 18px;
     padding: 0 20px 0 0;
+    font-weight: $font-weight-normal;
     width: auto;
 
     [dir="rtl"] & { padding: 0 0 0 20px;}
@@ -93,7 +123,7 @@ $header-height: 71px;
     &:focus,
     &:active {
       background-color: transparent;
-      color: $link_color;
+      color: $mit-link-color;
       text-decoration: underline;
     }
   }

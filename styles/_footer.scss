@@ -1,28 +1,362 @@
 /***** Footer *****/
+
+.container {
+  padding: 0 32px !important;
+  max-width: $max-width-container;
+  margin-top: 0 !important;
+}
+
 .footer {
-  border-top: 1px solid $low-contrast-border-color;
-  margin-top: 60px;
-  padding: 30px 0;
+  background: $footer-blue-bg;
+  color: white;
 
-  a {
-    color: $secondary-text-color;
+  .submit-a-request {
+    text-transform: uppercase;
   }
 
-  &-inner {
-    @include max-width-container;
-    display: flex;
-    justify-content: space-between;
+  .footer-inner {
+    margin: 0;
   }
-
-  &-language-selector button {
+  &-language-selector {
+    display: none;
     color: $secondary-text-color;
     display: inline-block;
+    font-weight: $font-weight-light;
+  }
+
+  .contact-block {
+    text-align: center;
+    padding: 30px 0 80px;
+    position: relative;
+    background: $color-grey-light;
+    color: $mit-link-color;
+    @include mobile {
+      padding: 30px 5% 100px;
+    }
+
+    &:after {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      content: '';
+      height: 15px;
+      background: $color-grey-medium;
+    }
+
+    &:before {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      content: '';
+      height: 30px;
+    }
+
+    h1 {
+      font-size: 35px;
+      line-height: 44px;
+      font-weight: $font-weight-semibold;
+      margin: 50px 0 40px;
+      font-family: 'Poppins', 'san-serif';
+    }
+
+    .link-not-found {
+      font-size: 18px;
+      font-weight: $font-weight-semibold;
+    }
+
+    .btn {
+      display: inline-block;
+      color: white;
+      min-width: 180px;
+      padding: 10px 30px;
+      text-align: center;
+      font-size: 24px;
+      line-height: 30px;
+      font-weight: $font-weight-normal;
+      background: $mit-brand-color;
+      border-radius: 5px;
+      border: 1px solid $mit-brand-color;
+    }
+  }
+  .footer-top {
+    padding-top: 30px;
+
+    &:after {
+      clear: both;
+      content: '';
+      display: block;
+    }
+  }
+
+  .footer-bottom {
+    padding-top: 54px;
+    flex-direction: row-reverse;
+
+    @include mobile {
+      padding-top: 0;
+    }
+  }
+
+  a {
+    color: white;
+  }
+
+
+  .new-footer {
+    border-top: 2px solid $brand_color;
+    background: $footer-blue-bg;
+    color: #FFF;
+    font-size: 13px;
+    white-space: normal;
+    display: flex;
+    justify-content: center;
+
+
+    .new-footer-container {
+      display:flex;
+
+      @include desktop {
+        flex-basis: 75%;
+      }
+      @include mobile {
+        flex-direction: column-reverse;
+        padding-left: 10px;
+      }
+    }
+
+    .copyright-container {
+        padding: 40px 0 12px 0;
+        flex-basis:40%;
+        flex-wrap: wrap;
+        flex-direction: row-reverse;
+
+        @include mobile {
+          width:100%;
+          padding: 30px 0 0 12px;
+          display: inline-flex;
+          flex-direction: column;
+        }
+
+        .copyright-col{
+          @include tablet {
+            margin-left: 0;
+          }
+        }
+
+        .address-col>address, .copyright-col{
+          opacity: 0.6;
+          font-style: normal;
+          margin-bottom: 1rem;
+          white-space: pre-wrap;
+        }
+        .address-col, .copyright-col {
+          @include tablet {
+            flex-direction: column;
+           }
+        }
+
+        .address-col>a>img {
+          display: inline-flex;
+          width: 130px;
+          height: 33px;
+          flex-shrink: 0;
+          margin-top: 5px;
+          margin-right: 15px;
+          margin-bottom: 15px;
+          @include desktop {
+             margin-bottom: 15px;
+         }
+        }
+    }
+
+    .help-contact-container{
+      flex-basis:60%;
+      margin: auto;
+      opacity: 0.6;
+
+      @include mobile {
+        padding-left: 12px;
+        width: 100%;
+        padding-top: 30px;
+        .links > li {
+          width: calc(100% / 3);
+          padding: 5px 0;
+        }
+      }
+
+      @include tablet {
+        padding-left: 0;
+        width:100%;
+      }
+
+      .help-contact-row {
+           display: flex;
+           flex-direction: row;
+           margin-top: 10px;
+
+          @include mobile {
+             flex-direction: column;
+          }
+       }
+
+      .help-col, .contact-col {
+         display: inline-flex;
+         margin-right: 30px;
+      }
+
+      .info {
+        margin-left: 15px;
+
+        p {
+          margin-block-start: 0;
+          margin-block-end: 1rem;
+
+        }
+
+        @include tablet {
+          margin-left: 15px
+        }
+      }
+      .info>a {
+        font-size:16px;
+        text-decoration: none;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        @include tablet {
+          display:block;
+        }
+      }
+
+      img {
+        width: 35px;
+        height: 35px;
+        padding: 0.484px 0 1.453px 0;
+        flex-shrink: 0;
+        margin-top: 5px;
+      }
+
+      a {
+         color:  #FFF;
+         text-decoration: none;
+      }
+
+      .links {
+            display: inline-flex;
+            gap: 30px;
+            width: 100%;
+            list-style: none;
+            padding: 0;
+            flex-wrap: wrap;
+            margin-top: 30px;
+
+           @include mobile {
+              gap: 10px;
+              gap: 0;
+              width: auto;
+           }
+        }
+    }
+  }
+
+
+  .right-info {
+    text-align: center;
+    padding: 0 0 20px;
+    // TODO: remove that line while adding hubspot form in the footer
+    display: none;
+
+    @include desktop {
+      float: right;
+      text-align: left;
+      padding: 0;
+    }
+  }
+
+  .footer-nav {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    @include desktop {
+      float: left;
+    }
+
+    li {
+      display: inline-block;
+      vertical-align: top;
+      margin: 0 0 0 10px;
+      font-size: 18px;
+      line-height: 28px;
+
+      @include desktop {
+        margin: 0 0 0 15px;
+      }
+
+      &:first-child {
+        margin: 0;
+      }
+    }
+  }
+
+  .footer-sub-nav {
+    margin: 0 0 5px;
+    list-style: none;
+    text-align: left;
+    font-size: 15px;
+    line-height: 20px;
+    padding: 0 0 20px 0;
+
+    @include tablet {
+      text-align: right;
+      margin: 0;
+      float: right;
+    }
+
+    li {
+      display: block;
+      margin: 0;
+      vertical-align: top;
+      padding: 0 0 12px;
+
+      @include tablet {
+        display: inline-block;
+        margin: 0 5px;
+      }
+
+      &:first-child {
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .copyright {
+    display: block;
+    text-align: left;
+    font-size: 15px;
+    line-height: 18px;
+    margin: 5px 0;
+
+    @include tablet {
+      padding-bottom: 10px;
+    }
+
+    @include desktop {
+      margin: 0;
+    }
+  }
+
+  .container {
+    max-width: $max-width-container;
+
+    @include desktop {
+      padding: 0 32px;
+    }
   }
 }
 
 .powered-by-zendesk {
-  a,
-  a:visited {
-    color: $secondary-text-color;
-  }
+  display: none;
 }

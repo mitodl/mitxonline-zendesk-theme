@@ -80,15 +80,23 @@
   margin: 5px 0;
 }
 
-.form footer {
-  margin-top: 40px;
-  padding-top: 30px;
+.form {
+  div:has(> button[type="submit"]) {
+    padding-bottom: 30px;
+  }
+
 }
 
 .form footer a {
   color: $secondary-text-color;
   cursor: pointer;
   margin-right: 15px;
+}
+
+.form button[type=submit] {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 16px;
 }
 
 .form .suggestion-list {
@@ -103,7 +111,9 @@
 
   li {
     padding: 10px 0;
-
-    a:visited { color: $visited_link_color; }
+    a {
+      color: black;
+    }
+    a:visited { color: $visited-link-color; }
   }
 }
