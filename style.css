@@ -379,7 +379,7 @@ ul {
   cursor: default;
 }
 
-.button-large, .hbs-form input[type=submit] {
+.button-large, input[type=submit], button[type=submit] {
   cursor: pointer;
   background-color: $brand_color;
   border: 0;
@@ -392,17 +392,17 @@ ul {
   width: 100%;
 }
 @media (min-width: 768px) {
-  .button-large, .hbs-form input[type=submit] {
+  .button-large, input[type=submit], button[type=submit] {
     width: auto;
   }
 }
-.button-large:visited, .hbs-form input[type=submit]:visited {
+.button-large:visited, input[type=submit]:visited, button[type=submit]:visited {
   color: $brand_text_color;
 }
-.button-large:hover, .button-large:active, .button-large:focus, .hbs-form input[type=submit]:hover, .hbs-form input[type=submit]:active, .hbs-form input[type=submit]:focus {
+.button-large:hover, .button-large:active, .button-large:focus, input[type=submit]:hover, input[type=submit]:active, input[type=submit]:focus, button[type=submit]:hover, button[type=submit]:active, button[type=submit]:focus {
   background-color: darken($brand_color, 20%);
 }
-.button-large[disabled], .hbs-form input[type=submit][disabled] {
+.button-large[disabled], input[type=submit][disabled], button[type=submit][disabled] {
   background-color: #ddd;
 }
 
@@ -593,8 +593,7 @@ ul {
   margin: 5px 0;
 }
 
-.form footer {
-  padding-top: 30px;
+.form div:has(> button[type=submit]) {
   padding-bottom: 30px;
 }
 
@@ -604,7 +603,7 @@ ul {
   margin-right: 15px;
 }
 
-.form input[type=submit] {
+.form button[type=submit] {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 16px;

@@ -80,9 +80,11 @@
   margin: 5px 0;
 }
 
-.form footer {
-  padding-top: 30px;
-  padding-bottom: 30px;
+.form {
+  div:has(> button[type="submit"]) {
+    padding-bottom: 30px;
+  }
+
 }
 
 .form footer a {
@@ -91,7 +93,7 @@
   margin-right: 15px;
 }
 
-.form input[type=submit] {
+.form button[type=submit] {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 16px;
